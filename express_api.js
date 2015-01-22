@@ -1,7 +1,8 @@
 var express = require('express');
 var request = require('request')
+var fs = require('fs');
 var app = express();
-
+app.use(express.static('public'));
 
 var rander = function(arr){
   index = Math.floor(Math.random() * arr.length);
@@ -25,6 +26,12 @@ app.get("/" , function(req,res){
 
 })
 
+
+app.get("/villain" , function(req,res){
+  fs.readFile(public/randomVillain.html);
+  res.end
+
+})
 
 var colors = ["Red" , "Crimson", "Bloody" , "Green" , "Blue","Purple","Black",
 "Yellow","Dark", "Deadly" , "Evil" , "Sinister" , "Vile" , "Phantom" , "Creeping",

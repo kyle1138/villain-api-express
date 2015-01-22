@@ -1,8 +1,53 @@
 <html>
+<head>
+
+<style>
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0;
+}
+
+h1{
+  color:red;
+  text-align:center;
+}
+header{
+  background-color:black;
+}
+div{
+  display:block;
+}
+#heading{
+
+  padding:50;
+}
+
+#page{
+  background-color:red;
+  font-size:32;
+  text-align: center;
+  display:block;
+  width:100%;
+  height:100%;
+
+}
+
+.bio{
+  padding-top:50px;
+}
+
+
+
+</style>
+</head>
 <body>
 <header>
+  <div id = "heading">
   <h1>Get Your Own Random Supervillain</h1>
-
+</div>
 </header>
 <div id="page">
 
@@ -36,9 +81,9 @@
     pn.innerText = parsed.name;
     pp.innerText = parsed.power;
     pc.innerText = parsed.city;
-    pn.class = "bio";
-    pp.class = "bio";
-    pc.class = "bio";
+    pn.className = "bio";
+    pp.className = "bio";
+    pc.className = "bio";
     page.appendChild(pn);
     page.appendChild(pp);
     page.appendChild(pc);
